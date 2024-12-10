@@ -1,0 +1,18 @@
+pandas
+torch
+numpy
+tqdm
+biopandas
+
+# For ESM3
+einops
+msgpack-numpy
+biopython
+scikit-learn
+brotli
+attrs
+cloudpathlib
+biotite
+
+# might be useful
+gdown
