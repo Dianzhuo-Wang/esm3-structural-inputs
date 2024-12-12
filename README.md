@@ -1,18 +1,92 @@
 # Does Structural Information Improve ESM3 for Protein Binding Affinity Prediction?
 
-This repository contains the code and data used in the paper "Does Structural Information Improve ESM3 for Protein Binding Affinity Prediction?" by Thomas Loux, Dianzhuo Wang, and Eugene Shakhnovich. The paper is available on [bioRxiv]().
+This repository contains the code and data used in the paper "Does Structural Information Improve ESM3 for Protein Binding Affinity Prediction?" by Thomas Loux, Dianzhuo Wang, and Eugene Shakhnovich. The paper is available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.09.627585v1).
 
-## Requirements
+# Installation and Setup Guide for Protein Structure Analysis Pipeline
 
-I run the code on the Harvard FASRC cluster. The code is written in Python 3.11
-You will need the following programs:
-EvoEF2 : https://github.com/tommyhuangthu/EvoEF2
-Rosetta (release-371): https://docs.rosettacommons.org/docs/latest/getting_started/Getting-Started
-Gromacs (2023 version): https://manual.gromacs.org/documentation/current/install-guide/index.html
-All these programs need to be compiled and installed on your system, which may take some time. You should follow the instructions on their respective websites. The EvoEF2, Rosetta Relax command and Gromacs energy-minimization are not too computationally intensive, it can run on CPU only. If you ever want to run actual MD simulations with Gromacs, you will need GPU installation.
+## Software Requirements
 
-Regarding ESM3, one need to obtain a embedding from a protein. After this work was done, I've realised you can do it easily directly from ESM3 (https://github.com/evolutionaryscale/esm/issues/2). I've actually slightly modified the code on my own to do it, so that you need to install my version (https://github.com/thomasloux/esm3) if you want to reproduce the results.
+### Core Programs
 
-## Structures
-The complete pipeline to obtain structures is not fully automated. You should carefully follow the instructions in the README.md file in the protein-structures folder that contains the PDB files for Desai dataset. Only the actual mutation with EvoEF2 will change for Bloom dataset.
+#### EvoEF2
+* Repository: [EvoEF2](https://github.com/tommyhuangthu/EvoEF2)
+* Follow repository instructions for compilation and installation
+* CPU-only operation is sufficient
 
+#### Rosetta (release-371)
+* Download: [Rosetta Documentation](https://docs.rosettacommons.org/docs/latest/getting_started/Getting-Started)
+* Primary use: Relax command 
+* CPU-only operation is sufficient
+* Requires academic or commercial license
+
+#### Gromacs (2023)
+* Installation guide: [Gromacs Manual](https://manual.gromacs.org/documentation/current/install-guide/index.html)
+* CPU installation sufficient for energy minimization
+* GPU required only if running full MD simulations
+* Follow official compilation instructions
+
+### Additional Requirements
+
+#### ESM3 (Modified Version)
+* Use custom fork: [Modified ESM3](https://github.com/thomasloux/esm3)
+* Required for obtaining protein embeddings
+* Note: One could also direct embedding with original ESM3 (evolutionaryscale/esm#2)
+
+## System Requirements
+
+* Platform: Validated on Harvard FASRC cluster
+* Python Version: 3.11
+* Hardware:
+  * CPU required for all basic operations
+  * GPU only needed for full MD simulations in Gromacs
+
+## Structure Generation Pipeline
+
+### Initial Setup
+1. Download and install all required programs following their respective documentation
+2. Compilation and installation may require significant time
+3. Verify all installations before proceeding
+
+### Dataset Processing
+
+#### Desai Dataset
+* Navigate to the protein-structures folder containing PDB files
+* Follow README.md instructions precisely
+* Process involves using EvoEF2, Rosetta Relax, and Gromacs energy-minimization
+
+#### Bloom Dataset
+* Use same pipeline as Desai dataset
+* Modify EvoEF2 mutation parameters as needed
+* Refer to dataset-specific documentation for parameter adjustments
+
+## Important Notes
+
+* Pipeline is not fully automated and requires manual intervention
+* Follow README.md instructions in protein-structures folder carefully
+* Back up intermediate results regularly
+* Computational requirements:
+  * EvoEF2: CPU-only, lightweight
+  * Rosetta Relax: CPU-only, moderate resources
+  * Gromacs energy-minimization: CPU-only, moderate resources
+  * Full MD simulations: Requires GPU installation
+
+## Troubleshooting
+
+### Common Issues
+1. Installation failures
+   * Verify system requirements
+   * Check for missing dependencies
+   * Follow compilation instructions step-by-step
+
+2. Pipeline errors
+   * Ensure correct software versions
+   * Verify input file formats
+   * Check dataset-specific requirements
+
+### Support
+* For ESM3 issues: Refer to modified repository documentation
+* For other tools: Consult respective official documentation
+
+---
+
+*Note: This guide assumes basic familiarity with command-line operations and protein structure analysis. For detailed procedures, always refer to the README.md in the protein-structures folder.*
