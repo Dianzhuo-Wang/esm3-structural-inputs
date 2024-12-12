@@ -70,23 +70,6 @@ This repository contains the code and data used in the paper "Does Structural In
   * Gromacs energy-minimization: CPU-only, moderate resources
   * Full MD simulations: Requires GPU installation
 
-## Troubleshooting
-
-### Common Issues
-1. Installation failures
-   * Verify system requirements
-   * Check for missing dependencies
-   * Follow compilation instructions step-by-step
-
-2. Pipeline errors
-   * Ensure correct software versions
-   * Verify input file formats
-   * Check dataset-specific requirements
-
-### Support
-* For ESM3 issues: Refer to modified repository documentation
-* For other tools: Consult respective official documentation
-
 ---
 
 *Note: This guide assumes basic familiarity with command-line operations and protein structure analysis. For detailed procedures, always refer to the README.md in the protein-structures folder.*
