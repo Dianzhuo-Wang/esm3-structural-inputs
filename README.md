@@ -61,7 +61,6 @@ This repository contains the code and data used in the paper "Does Structural In
 
 ## Important Notes
 
-* Pipeline is not fully automated and requires manual intervention
 * Follow README.md instructions in protein-structures folder carefully
 * Back up intermediate results regularly
 * Computational requirements:
@@ -72,4 +71,11 @@ This repository contains the code and data used in the paper "Does Structural In
 
 ---
 
-*Note: This guide assumes basic familiarity with command-line operations and protein structure analysis. For detailed procedures, always refer to the README.md in the protein-structures folder.*
+@article{loux2024more,
+  title={More Structures, Less Accuracy: ESM3's Binding Prediction Paradox},
+  author={Loux, Thomas and Wang, Dianzhuo and Shakhnovich, Eugene},
+  journal={bioRxiv},
+  pages={2024--12},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
