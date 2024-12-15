@@ -69,8 +69,13 @@ This repository contains the code and data used in the paper "Does Structural In
   * Gromacs energy-minimization: CPU-only, moderate resources
   * Full MD simulations: Requires GPU installation
 
----
 
+
+
+
+If you use the code or predictions please consider citing:
+
+```
 @article{loux2024more,
   title={More Structures, Less Accuracy: ESM3's Binding Prediction Paradox},
   author={Loux, Thomas and Wang, Dianzhuo and Shakhnovich, Eugene},
@@ -79,3 +84,5 @@ This repository contains the code and data used in the paper "Does Structural In
   year={2024},
   publisher={Cold Spring Harbor Laboratory}
 }
+```
+For any questions, please email thomas.loux at polytechnique.edu and johnwang at g.harvard.edu
